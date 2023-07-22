@@ -1,18 +1,29 @@
 const button = document.getElementById("submitButton");
+const responses = ["yes!", "maybe...", "absolutely not!", "probably?", "nope.", "without a doubt!"];
+const ball = document.getElementById("stillBall");
+const result = document.getElementById("result");
+
 button.onclick = function () {
-  generateResponse();
+  if (document.getElementById("question").value == "") {
+    result.innerHTML = "no question asked, try again";
+  } else {
+    animateBall();
+    // use arrow function since setTimeout requires a function w/ no parameters
+    setTimeout(() => {
+      pickResponse();
+    }, 1100);
+  }
 };
 
-async function generateResponse() {
-  const responses = ["yes!", "maybe", "absolutely not!", "probably..."];
-  document.getElementById("result").innerHTML = responses[Math.floor(Math.random() * responses.length)];
+function pickResponse() {
+  // ball is finished shaking, make still again
+  ball.src = "images/still-ball.png";
+  // randomly pick a response to display in button HTML
+  result.innerHTML = responses[Math.floor(Math.random() * responses.length)];
 }
 
-// document.addEventListener("DOMContentLoaded", function () {
-//   // makes button and listens for the click
-//   var button = document.getElementById("submitButton");
-
-//   button.addEventListener("click", function () {
-//     // randomly selects a response
-//   });
-// });
+function animateBall() {
+  // begin shaking ball
+  ball.src = "images/ball-shake.gif";
+  result.innerHTML = "generating...";
+}
