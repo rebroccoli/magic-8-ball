@@ -1,9 +1,16 @@
 # magic-8-ball
-a chrome extension for decision making
+a chrome extension for decision making!
 
+## how to use
 
-photo attributions: 
+1. clone this repository
+2. go to chrome://extensions/, or click your extension menu (top right of browser)
+3. toggle "developer mode" (top right) on
+4. click "load unpacked" (top left)
+5. select cloned repository folder
+6. click and use! :)
 
-8 ball icon - https://creazilla.com/nodes/58910-pool-8-ball-emoji-clipart
+## photo attributions 
+icon - https://creazilla.com/nodes/58910-pool-8-ball-emoji-clipart
 
-8 ball shaking gif - https://gifer.com/en/PTQh
+animated 8 ball - https://gifer.com/en/PTQh
